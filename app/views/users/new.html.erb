@@ -1,0 +1,22 @@
+<h1>Cadastrar Novo Usuário</h1>
+
+<%= form_with(model: @user, url: users_path, local: true, multipart: true) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pdf_document, 'PDF Document' %>
+    <%= f.file_field :pdf_document %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Cadastrar Usuário" %>
+  </div>
+<% end %>
